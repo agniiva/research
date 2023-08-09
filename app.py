@@ -1,8 +1,8 @@
 import os
 from dotenv import load_dotenv
-import streamlit as st
+# import streamlit as st
 # This should be the very first Streamlit command in your script
-st.set_page_config(page_title="AI research agent", page_icon=":bird:")
+# st.set_page_config(page_title="AI research agent", page_icon=":bird:")
 from langchain import PromptTemplate
 from langchain.agents import initialize_agent, Tool
 from langchain.agents import AgentType
@@ -176,19 +176,19 @@ agent = initialize_agent(
 
 
 # 4. Use streamlit to create a web app
-def main():
-    st.header("AI research agent :bird:")
-    query = st.text_input("Research goal")
+# def main():
+#     st.header("AI research agent :bird:")
+#     query = st.text_input("Research goal")
 
-    if query:
-        st.write("Doing research for ", query)
+#     if query:
+#         st.write("Doing research for ", query)
 
-        result = agent({"input": query})
+#         result = agent({"input": query})
 
-        st.info(result['output'])
+#         st.info(result['output'])
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
 
 
 # 5. Set this as an API endpoint via FastAPI
